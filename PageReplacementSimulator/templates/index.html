@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Replacement Simulator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Page Replacement Simulator</h1>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="sidebar">
+        <h3>Input</h3>
+
+        <input id="pages" placeholder="e.g. 2 3 2 1 5">
+        <input id="capacity" type="number" placeholder="Frames">
+
+        <select id="algorithm">
+            <option value="fifo">FIFO</option>
+            <option value="lru">LRU</option>
+            <option value="optimal">Optimal</option>
+        </select>
+
+        <button onclick="runSimulation()">Run Simulation</button>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="main">
+
+        <!-- STATS -->
+        <div class="cards">
+            <div class="card" id="faults">Faults: 0</div>
+            <div class="card" id="hits">Hits: 0</div>
+            <div class="card" id="ratio">Hit Ratio: 0%</div>
+        </div>
+
+        <!-- TABLE -->
+        <div id="tableContainer"></div>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
